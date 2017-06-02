@@ -27,6 +27,9 @@ function theme_setup()
 {
     //add thumbnails
     add_theme_support('post-thumbnails');
+
+    //delete generator version
+    remove_action('wp_head', 'wp_generator');
 }
 
 add_action('after_setup_theme', 'theme_setup');
