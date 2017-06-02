@@ -30,6 +30,12 @@ function theme_setup()
 
     //delete generator version
     remove_action('wp_head', 'wp_generator');
+
+    //delete french quote
+    remove_filter('the_content', 'wptexturize');
+
+    //generate title
+    add_theme_support('title-tag');
 }
 
 add_action('after_setup_theme', 'theme_setup');
