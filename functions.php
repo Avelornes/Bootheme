@@ -23,4 +23,12 @@ function theme_js()
 
 add_action('wp_enqueue_scripts', 'theme_js');
 
+function theme_setup()
+{
+    //add thumbnails
+    add_theme_support('post-thumbnails');
+}
+
+add_action('after_setup_theme', 'theme_setup');
+
 ?>
