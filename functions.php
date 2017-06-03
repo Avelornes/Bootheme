@@ -86,7 +86,7 @@ function mbe_wp_head()
 
 //publish dates
 
-function filter_publish_dates( $the_date, $d, $post ) {
+function filter_publish_dates( $the_date, $post ) {
     if ( is_int( $post) ) {
         $post_id = $post;
     } else {
