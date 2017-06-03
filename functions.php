@@ -39,6 +39,13 @@ function theme_setup()
 
     //fix adminbar
     add_filter('body_class', 'mbe_body_class');
+
+    // Register Custom Navigation Walker
+    require_once('assets/librairies/bootstrap-navwalker/wp-bootstrap-navwalker.php');
+
+    //menu
+    register_nav_menus(array('primary'=>'Principal'));
+
 }
 
 add_action('after_setup_theme', 'theme_setup');

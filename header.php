@@ -11,7 +11,7 @@
 
     <?php wp_head(); ?>
 </head>
-<?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
+<?php echo '<body class="' . join(' ', get_body_class()) . '">' . PHP_EOL; ?>
 <header>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -24,13 +24,19 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name') ?></a></div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
+            <?php
+            wp_nav_menu( array(
+                    'menu'              => 'top-menu',
+                    'theme_location'    => 'primary',
+                    'depth'             => 2,
+                    'container'         => 'div',
+                    'container_class'   => 'navbar-collapse collapse',
+                    'container_id'      => 'navbar',
+                    'menu_class'        => 'nav navbar-nav navbar-right',
+                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'            => new WP_Bootstrap_Navwalker())
+            );
+            ?>
         </div>
     </nav>
 </header>
