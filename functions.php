@@ -77,4 +77,22 @@ function mbe_wp_head()
         . PHP_EOL;
 }
 
+//publish dates
+
+function filter_publish_dates( $the_date, $d, $post ) {
+    if ( is_int( $post) ) {
+        $post_id = $post;
+    } else {
+        $post_id = $post->ID;
+    }
+
+    if ( 'product' != get_post_type( $post_id ) )
+        return $the_date;
+
+    return date( 'Y-m-d - h:j:s', strtotime( $the_date ) );
+}
+add_action( 'get_the_date', 'filter_publish_dates', 10, 3 );
+
 ?>
+
+
