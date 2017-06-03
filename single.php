@@ -32,7 +32,7 @@ else : ?>
     <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 
 <?php endif; ?>
-<div class="navigation"><p><?php posts_nav_link('&#8734;','&laquo;&laquo; Go Forward 
-In Time','Go Back in Time &raquo;&raquo;'); ?></p></div>
+<?php previous_post_link(); ?>    <?php next_post_link(); ?>
+
 <?php get_footer(); ?>
 
