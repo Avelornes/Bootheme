@@ -42,6 +42,8 @@ function theme_setup() {
 
 }
 
+add_action( 'after_setup_theme', 'theme_setup' );
+
 //publish dates
 
 function filter_publish_dates( $the_date, $post ) {
