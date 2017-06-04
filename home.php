@@ -9,7 +9,6 @@
 <?php else : ?>
     <div class="post">
 <?php endif; ?>
-
 	<?php
 
 	$post_display_option = get_theme_mod( 'post_display_option', 'post-excerpt' );
