@@ -13,7 +13,11 @@
 </head>
 <?php echo '<body class="' . join(' ', get_body_class()) . '">' . PHP_EOL; ?>
 <header>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
+		<?php
+		// Fix menu overlap
+		if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;"></div>';
+		?>
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -38,6 +42,7 @@
             );
             ?>
         </div>
+    </div>
     </nav>
 </header>
 <div id="content" class="site-content">
