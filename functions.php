@@ -62,6 +62,13 @@ function filter_publish_dates( $the_date, $post ) {
 
 add_action( 'get_the_date', 'filter_publish_dates', 10, 3 );
 
+//Excerpt
+function new_excerpt_more( $more ) {
+	return '<a class="more-link" href="' . get_permalink() . '">' . '[lire la suite]' . '</a>';
+}
+
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
 ?>
 
 
