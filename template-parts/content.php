@@ -12,4 +12,5 @@ if ($thumbnail_html = wp_get_attachment_image_src(get_post_thumbnail_id($post->I
 <div class="entry">
 	<?php the_content(); ?>
 	<?php get_attached_media($type, $post_id) ?>
+	<?php the_tags( 'Etiquettes : ', ' • ', '<br />' ); ?>
 </div>
