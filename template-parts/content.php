@@ -1,5 +1,5 @@
 <?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) :
-	the_post(); ?>
+	$wp_query->the_post(); ?>
 
 	<?php if ( in_category( '3' ) ) : ?>
     <div class="post-cat-three"></div>
