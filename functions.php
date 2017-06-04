@@ -34,9 +34,6 @@ function theme_setup() {
 	//generate title
 	add_theme_support( 'title-tag' );
 
-	/*//fix adminbar
-	add_filter( 'body_class', 'mbe_body_class' );*/
-
 	// Register Custom Navigation Walker
 	require_once( 'assets/librairies/bootstrap-navwalker/wp-bootstrap-navwalker.php' );
 
@@ -45,41 +42,6 @@ function theme_setup() {
 
 }
 
-add_action( 'after_setup_theme', 'theme_setup' );
-
-/*//fix adminbar
-function mbe_body_class( $classes ) {
-	if ( is_user_logged_in() ) {
-		$classes[] = 'body-logged-in';
-	} else {
-		$classes[] = 'body-logged-out';
-	}
-
-	return $classes;
-}
-
-add_action( 'wp_head', 'mbe_wp_head' );
-function mbe_wp_head() {
-	echo '<style>'
-	     . PHP_EOL
-	     . 'body{ padding-top: 70px !important; }'
-	     . PHP_EOL
-	     . 'body.body-logged-in .navbar-fixed-top{ top: 46px !important; }'
-	     . PHP_EOL
-	     . 'body.logged-in .navbar-fixed-top{ top: 46px !important; }'
-	     . PHP_EOL
-	     . '@media only screen and (min-width: 783px) {'
-	     . PHP_EOL
-	     . 'body{ padding-top: 70px !important; }'
-	     . PHP_EOL
-	     . 'body.body-logged-in .navbar-fixed-top{ top: 28px !important; }'
-	     . PHP_EOL
-	     . 'body.logged-in .navbar-fixed-top{ top: 28px !important; }'
-	     . PHP_EOL
-	     . '}</style>'
-	     . PHP_EOL;
-}
-*/
 //publish dates
 
 function filter_publish_dates( $the_date, $post ) {
