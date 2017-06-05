@@ -63,12 +63,28 @@ function filter_publish_dates( $the_date, $post ) {
 add_action( 'get_the_date', 'filter_publish_dates', 10, 3 );
 
 //Excerpt
-function new_excerpt_more( $more ) {
-	return '<a class="more-link" href="' . get_permalink() . '">' . '[lire la suite]' . '</a>';
+function excerpt_read_more_link( $output ) {
+	global $post;
+
+	return $output . '<a href="' . get_permalink( $post->ID ) . '"> Lire la suite...</a>';
 }
 
-add_filter( 'excerpt_more', 'new_excerpt_more' );
+add_filter( 'the_excerpt', 'excerpt_read_more_link' );
 
+//API options
+function boot_activ_options() {
+	$theme_opts = get_option('boot_opts');
+	if(!$theme_opts) {
+		$opts = array(
+			'image_01_url' => '',
+			'legen_01' => ''
+		);
+
+		add_option('boot_opts', $opts);
+	}
+}
+
+add_action('after_switch_theme', 'boot_activ_options');
 ?>
 
 
