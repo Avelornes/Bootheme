@@ -4,13 +4,7 @@
 	?></strong>
 
 <?php
-
-$post_display_option = get_theme_mod( 'post_display_option', 'post-excerpt' );
-if ( 'post-excerpt' === $post_display_option ) {
-	get_template_part( 'template-parts/content', 'excerpt' );
-} else {
-	get_template_part( 'template-parts/content', get_post_format() );
-}
+get_template_part( 'template-parts/content', 'excerpt' );
 ?>
 
 <?php get_footer(); ?>

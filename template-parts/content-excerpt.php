@@ -1,5 +1,5 @@
-<?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) :
-$wp_query->the_post(); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) :
+the_post(); ?>
 
 <?php if ( in_category( '3' ) ) : ?>
     <div class="post-cat-three"></div>
@@ -14,7 +14,7 @@ $wp_query->the_post(); ?>
 	<?php endif; ?>
 
     <h2><a href="<?php the_permalink(); ?>" rel="bookmark"
-           title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+           title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
     <small><?php echo get_the_date(); ?>
         par <?php the_author_posts_link(); ?> <?php _e( 'Posté dans ' ); ?><?php the_category( ', ' ); ?></small>
