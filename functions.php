@@ -102,12 +102,15 @@ function boot_admin_menus() {
 	add_menu_page(
 		'Bootheme Options',
 		'Options du thème',
-		'publish pages',
+		'publish_pages',
 		'boot_theme_opts',
 		'boot_build_options_page'
 	);
-	include ('includes/build-options-page.php');
+	include('includes/build-options-page.php');
 }
+
+add_action('admin_menu', 'boot_admin_menus');
+
 ?>
 
 
