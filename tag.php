@@ -1,8 +1,9 @@
 <?php get_header(); ?>
-<strong><?php
+<strong>
+	<?php
 	single_tag_title( 'Etiquette : ' );
-	?></strong>
-
+	?>
+</strong>
 <?php
 get_template_part( 'template-parts/content', 'excerpt' );
 ?>

@@ -1,10 +1,25 @@
 <?php get_header(); ?>
 
-	<?php
-	get_template_part( 'template-parts/content', get_post_format() );
-	?>
+<?php
+get_template_part( 'template-parts/content', get_post_format() );
+?>
 
-<?php previous_post_link(); ?>    <?php next_post_link(); ?>
+<nav aria-label="">
+    <ul class="pager">
+        <li class="previous">
+            <a href="#">
+                <span aria-hidden="true">&larr;</span>
+				<?php previous_post_link(); ?>
+            </a>
+        </li>
+        <li class="next">
+            <a href="#">
+				<?php next_post_link(); ?>
+                <span aria-hidden="true">&rarr;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
 
 <?php get_footer(); ?>
 

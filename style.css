@@ -10,3 +10,15 @@ Text Domain: bootheme
 body {
     margin-top: 70px;
 }
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.panel-body {
+    padding: 0;
+}
+
+.img-thumbnail {
+    padding: 0;
+}
