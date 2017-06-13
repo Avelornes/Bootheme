@@ -25,6 +25,9 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 function boot_admin_init() {
 	//style Dashboard
 	function boot_admin_script() {
+		if ( ! isset( $_GET['page'] ) || $_GET['page'] != "boot_theme_opts" ) {
+			return;
+		}
 		wp_enqueue_style( 'bootstrap-adm-core', get_template_directory_uri() . '/assets/librairies/bootstrap/css/bootstrap.css', array() );
 	}
 
