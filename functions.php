@@ -21,6 +21,17 @@ function theme_js() {
 
 add_action( 'wp_enqueue_scripts', 'theme_js' );
 
+//Admin Dashboard
+function boot_admin_init() {
+	function boot_admin_script() {
+		wp_enqueue_style( 'bootstrap-adm-core', get_template_directory_uri() . '/assets/librairies/bootstrap/css/bootstrap.css', array() );
+	}
+
+	add_action( 'admin_enqueue_scripts', 'boot_admin_script' );
+}
+
+add_action( 'admin_init', 'boot_admin_init' );
+
 function theme_setup() {
 	//add thumbnails
 	add_theme_support( 'post-thumbnails' );
@@ -73,18 +84,30 @@ add_filter( 'the_excerpt', 'excerpt_read_more_link' );
 
 //API options
 function boot_activ_options() {
-	$theme_opts = get_option('boot_opts');
-	if(!$theme_opts) {
+	$theme_opts = get_option( 'boot_opts' );
+	if ( ! $theme_opts ) {
 		$opts = array(
 			'image_01_url' => '',
-			'legen_01' => ''
+			'legend_01'    => ''
 		);
 
-		add_option('boot_opts', $opts);
+		add_option( 'boot_opts', $opts );
 	}
 }
 
-add_action('after_switch_theme', 'boot_activ_options');
+add_action( 'after_switch_theme', 'boot_activ_options' );
+
+//Theme Options
+function boot_admin_menus() {
+	add_menu_page(
+		'Bootheme Options',
+		'Options du thème',
+		'publish pages',
+		'boot_theme_opts',
+		'boot_build_options_page'
+	);
+	include ('includes/build-options-page.php');
+}
 ?>
 
 
