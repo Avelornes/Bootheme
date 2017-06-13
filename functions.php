@@ -23,11 +23,17 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 //Admin Dashboard
 function boot_admin_init() {
+	//style Dashboard
 	function boot_admin_script() {
 		wp_enqueue_style( 'bootstrap-adm-core', get_template_directory_uri() . '/assets/librairies/bootstrap/css/bootstrap.css', array() );
 	}
 
 	add_action( 'admin_enqueue_scripts', 'boot_admin_script' );
+
+	//
+	include( 'includes/save-options-page.php' );
+
+	add_action( 'admin_post_boot_save_options', 'boot_save_options' );
 }
 
 add_action( 'admin_init', 'boot_admin_init' );
@@ -106,10 +112,10 @@ function boot_admin_menus() {
 		'boot_theme_opts',
 		'boot_build_options_page'
 	);
-	include('includes/build-options-page.php');
+	include( 'includes/build-options-page.php' );
 }
 
-add_action('admin_menu', 'boot_admin_menus');
+add_action( 'admin_menu', 'boot_admin_menus' );
 
 ?>
 
