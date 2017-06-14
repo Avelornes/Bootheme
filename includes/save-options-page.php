@@ -2,7 +2,7 @@
 
 function boot_save_options() {
 	if ( ! current_user_can( 'publish_pages' ) ) {
-		wp_die( 'Vous n\'êtes pa autorisé à effectuer cette opération' );
+		wp_die( 'Vous n\'êtes pas autorisé à effectuer cette opération' );
 	}
 	check_admin_referer( 'boot_options_verify' );
 	$opts              = get_option( 'boot_opts' );
