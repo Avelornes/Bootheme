@@ -33,7 +33,7 @@ function boot_admin_init() {
 		//enable wp media uploader
 		wp_enqueue_media();
 		//load script admin
-		wp_enqueue_script( 'boot-admin-init', get_template_directory_uri() . 'assets/js/admin-options.js', array() );
+		wp_enqueue_script( 'boot-admin-init', get_template_directory_uri() . '/assets/js/admin-options.js', array() );
 	}
 
 	add_action( 'admin_enqueue_scripts', 'boot_admin_script' );
@@ -49,6 +49,17 @@ add_action( 'admin_init', 'boot_admin_init' );
 function theme_setup() {
 	//add thumbnails
 	add_theme_support( 'post-thumbnails' );
+
+	//custom header --Image d'en-tête--
+	$args = array(
+		'flex-width'    => true,
+		'width'         => 1350,
+		'flex-height'    => true,
+		'height'        => 200,
+		'uploads'       => true,
+		'default-image' => get_template_directory_uri() . '/assets/images/header.jpg',
+	);
+	add_theme_support( 'custom-header', $args );
 
 	//delete generator version
 	remove_action( 'wp_head', 'wp_generator' );

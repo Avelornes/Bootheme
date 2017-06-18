@@ -11,7 +11,7 @@
 
 	<?php wp_head(); ?>
 </head>
-<?php echo '<body class="' . join( ' ', get_body_class() ) . '">' . PHP_EOL; ?>
+<?php echo '<body class="' . join( ' ', get_body_class() ) . '">'; ?>
 <header>
     <div class="navbar navbar-default navbar-fixed-top">
 		<?php
@@ -47,6 +47,6 @@
 			?>
         </div>
     </div>
-    </nav>
+    <img class="img-responsive" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 </header>
 <div id="content" class="site-content">
