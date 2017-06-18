@@ -150,6 +150,21 @@ function boot_admin_menus() {
 
 add_action( 'admin_menu', 'boot_admin_menus' );
 
+//Enable Widget
+function boot_widgets_init() {
+	register_sidebar( array(
+		'name'          => 'Footer Widget Zone',
+		'description'   => 'Widgets du footer (4 maximum)',
+		'id'            => 'widgetized-footer',
+		'before_widget' => '<div id="%1$s" class="col-xs-3 %2$s"><div class="inside-widget">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h3 class="text-center">',
+		'after_title'   => '</h3>',
+	) );
+}
+
+add_action('widgets_init', 'boot_widgets_init');
+
 ?>
 
 
