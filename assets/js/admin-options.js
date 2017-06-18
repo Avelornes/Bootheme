@@ -23,5 +23,6 @@ jQuery(document).ready(function ($) {
         var mon_url = objImg.sizes.medium_large.url;
         $('#img#img_preview_01').attr('src', mon_url);
         $('input#boot_image_01').attr('value', mon_url);
+        $('input#boot_image_url_01').attr('value', mon_url);
     });
 });
