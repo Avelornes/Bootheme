@@ -54,7 +54,7 @@ function theme_setup() {
 	$args = array(
 		'flex-width'    => true,
 		'width'         => 1350,
-		'flex-height'    => true,
+		'flex-height'   => true,
 		'height'        => 200,
 		'uploads'       => true,
 		'default-image' => get_template_directory_uri() . '/assets/images/header.jpg',
@@ -80,7 +80,21 @@ function theme_setup() {
 
 add_action( 'after_setup_theme', 'theme_setup' );
 
-//publish dates
+//Add size 'medium large' for images
+
+function my_images_sizes( $sizes ) {
+	$addsizes = array(
+		"medium_large" => "Medium Large"
+	);
+
+	$newsizes = array_merge( $sizes, $addsizes );
+
+	return $newsizes;
+}
+
+add_filter( 'image_size_names_choose', 'my_images_sizes' );
+
+//Publish dates
 
 function filter_publish_dates( $the_date, $post ) {
 	if ( is_int( $post ) ) {
