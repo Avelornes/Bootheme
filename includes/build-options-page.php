@@ -31,7 +31,8 @@ function boot_build_options_page() {
                                  alt="">
                         </div>
                         <div class="col-lg-6">
-                            <button style="margin: 20px" class="btn btn-primary btn-lg btn-select-img" type="button" id="btn_img_01">Choisir
+                            <button style="margin: 20px" class="btn btn-primary btn-lg btn-select-img" type="button"
+                                    id="btn_img_01">Choisir
                                 une image pour le logo
                             </button>
                         </div>
@@ -39,7 +40,9 @@ function boot_build_options_page() {
                     <div class="form-group">
                         <label for="boot_image_01" class="col-sm-2 control-label">Image sauvegardée</label>
                         <div class="col-sm-10">
-                            <input type="text" width="300px" id="boot_image_01" name="boot_image_01"
+                            <input type="text" width="300px" id="boot_image_01" name="boot_image_01" disabled
+                                   value="<?php echo $theme_opts['image_01_url']; ?>" style="width: 100% ;"/>
+                            <input type="hidden" width="300px" id="boot_image_url_01" name="boot_image_url_01"
                                    value="<?php echo $theme_opts['image_01_url']; ?>" style="width: 100% ;"/>
                         </div>
                     </div>
