@@ -21,6 +21,29 @@ function boot_build_options_page() {
 				<?php
 				wp_nonce_field( 'boot_options_verify' );
 				?>
+
+                <div class="col-xs-12">
+                    <h1 class="h2">Image du logo sur la homepage</h1>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <img style="margin-bottom:20px;" id="img-preview-01"
+                                 src="<?php echo $theme_opts['image_01_url']; ?>" class="img-responsive img-thumbnail"
+                                 alt="">
+                        </div>
+                        <div class="col-lg-6">
+                            <button style="margin: 20px" class="btn btn-primary btn-lg btn-select-img" type="button" id="btn_img_01">Choisir
+                                une image pour le logo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="boot_image_01" class="col-sm-2 control-label">Image sauvegardée</label>
+                        <div class="col-sm-10">
+                            <input type="text" width="300px" id="boot_image_01" name="boot_image_01"
+                                   value="<?php echo $theme_opts['image_01_url']; ?>" style="width: 100% ;"/>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-xs-12">
                     <div class="form-group">
                         <label for="boot_legend_01" class="col-sm-2 control-label">Légende</label>
