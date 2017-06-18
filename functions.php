@@ -29,6 +29,11 @@ function boot_admin_init() {
 			return;
 		}
 		wp_enqueue_style( 'bootstrap-adm-core', get_template_directory_uri() . '/assets/librairies/bootstrap/css/bootstrap.css', array() );
+
+		//enable wp media uploader
+		wp_enqueue_media();
+		//load script admin
+		wp_enqueue_script( 'boot-admin-init', get_template_directory_uri() . 'assets/js/admin-options.js', array() );
 	}
 
 	add_action( 'admin_enqueue_scripts', 'boot_admin_script' );
