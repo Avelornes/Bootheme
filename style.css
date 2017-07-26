@@ -8,7 +8,7 @@ Text Domain: bootheme
 */
 
 body {
-    margin-top: 50px;
+    margin-top: 3.5%;
 }
 
 a, a:hover {
@@ -21,4 +21,18 @@ a, a:hover {
 
 .img-thumbnail {
     padding: 0;
+}
+
+.post {
+    margin-top: 5%;
+}
+
+.post-cat-three {
+    margin: 5%;
+}
+
+.navbar-default {
+    background-color: #FFFFFF;
+    box-shadow: 0 14px 20px -12px rgba(0, 0, 0, 0.2);
+    color: #0f0f0f;
 }

@@ -1,26 +1,27 @@
 <?php
 
-function boot_build_options_page() {
-	$theme_opts = get_option( 'boot_opts' );
-	?>
+function boot_build_options_page()
+{
+    $theme_opts = get_option('boot_opts');
+    ?>
 
 
     <div class="wrap">
         <div class="container">
-			<?php
+            <?php
 
-			if ( isset( $_GET['status'] ) && $_GET['status'] == 1 ) {
-				echo '<div class="alert alert-success">Mise à jour effectuée avec succès !</div>';
-			}
-			?>
+            if (isset($_GET['status']) && $_GET['status'] == 1) {
+                echo '<div class="alert alert-success">Mise à jour effectuée avec succès !</div>';
+            }
+            ?>
             <div class="jumbotron">
                 <h1>Paramètres du site</h1>
             </div>
             <form id="form-boot-options" class="form-horizontal" action="admin-post.php" method="post">
                 <input type="hidden" name="action" value="boot_save_options">
-				<?php
-				wp_nonce_field( 'boot_options_verify' );
-				?>
+                <?php
+                wp_nonce_field('boot_options_verify');
+                ?>
 
                 <div class="col-xs-12">
                     <h1 class="h2">Image du logo sur la homepage</h1>
