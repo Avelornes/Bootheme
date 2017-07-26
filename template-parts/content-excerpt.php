@@ -28,7 +28,7 @@ if (have_posts()) :
                             <?php echo get_the_date(); ?>
                             par
                             <?php the_author_posts_link();
-                            _e('Posté dans ');
+                            _e(' posté dans ');
                             the_category(', '); ?>
                         </small>
 
