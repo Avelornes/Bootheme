@@ -196,7 +196,7 @@ function boot_get_bootstrap_paginate_links() {
 	<?php
 	$links = ob_get_clean();
 
-	return apply_filters( 'sa_bootstap_paginate_links', $links );
+	return apply_filters( 'boot_bootstap_paginate_links', $links );
 }
 
 function boot_bootstrap_paginate_links() {
