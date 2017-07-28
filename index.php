@@ -1,5 +1,5 @@
-<?php get_header(); ?>
-<?php
+<?php get_header();
+
 $args_blog = array(
 	'post_type'      => 'post',
 	'posts_per_page' => 2
@@ -29,8 +29,7 @@ if ( $req_blog->have_posts() ) :
 				<?php
 				while ( $req_blog->have_posts() ):
 				$req_blog->the_post();
-				?>
-				<?php
+
 				if ( $thumbnail_html = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ) ):
 					$thumbnail_src = $thumbnail_html['0'];
 					?>
@@ -60,7 +59,7 @@ if ( $req_blog->have_posts() ) :
 			wp_reset_postdata() ?>
         </div>
     </section>
-<?php endif; ?>
+<?php endif;
 
-<?php get_footer(); ?>
+get_footer(); ?>
 

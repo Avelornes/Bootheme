@@ -1,9 +1,7 @@
 <?php get_header(); ?>
-
     <div id="main_blog">
         <div id="articles">
 			<?php
-
 			get_template_part( 'template-parts/content', 'excerpt' );
 			?>
         </div>

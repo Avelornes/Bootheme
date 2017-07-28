@@ -1,7 +1,6 @@
-<?php get_header(); ?>
+<?php get_header();
 
-<?php
-get_template_part('template-parts/content', get_post_format());
+get_template_part( 'template-parts/content', get_post_format() );
 ?>
 
 <nav aria-label="">
@@ -9,12 +8,12 @@ get_template_part('template-parts/content', get_post_format());
         <li class="previous">
             <a href="#">
                 <span aria-hidden="true">&larr;</span>
-                <?php previous_post_link(); ?>
+				<?php previous_post_link(); ?>
             </a>
         </li>
         <li class="next">
             <a href="#">
-                <?php next_post_link(); ?>
+				<?php next_post_link(); ?>
                 <span aria-hidden="true">&rarr;</span>
             </a>
         </li>

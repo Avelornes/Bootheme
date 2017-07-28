@@ -224,6 +224,7 @@ function themename_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 }
+
 add_action( 'widgets_init', 'boot_widgets_init' );
 
 

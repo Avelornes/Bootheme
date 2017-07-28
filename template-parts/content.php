@@ -11,8 +11,7 @@ if ( $wp_query->have_posts() ) :
             <div class="post">
             <div class="container">
             <div class="row">
-		<?php endif; ?>
-		<?php
+		<?php endif;
 		if ( $thumbnail_html = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ) ):
 			$thumbnail_src = $thumbnail_html['0'];
 			?>
