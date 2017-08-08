@@ -36,3 +36,34 @@ a, a:hover {
     box-shadow: 0 14px 20px -12px rgba(0, 0, 0, 0.2);
     color: #0f0f0f;
 }
+
+#sidebar ul {
+    list-style: none;
+}
+
+#main_blog {
+    display: flex;
+}
+
+#articles {
+    width: 70%;
+}
+
+#articles .container {
+    width: 124%;
+    margin-left: 10%;
+}
+
+#sidebar {
+    margin-top: 4%;
+}
+
+#searchform div {
+    display: flex;
+    flex-direction: column;
+}
+
+.pages.clearfix {
+    display: flex;
+    justify-content: center;
+}
