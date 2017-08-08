@@ -38,7 +38,7 @@ function boot_admin_init() {
 
 	add_action( 'admin_enqueue_scripts', 'boot_admin_script' );
 
-	//
+	//Admin option page, optionnel
 	include( 'includes/save-options-page.php' );
 
 	add_action( 'admin_post_boot_save_options', 'boot_save_options' );
