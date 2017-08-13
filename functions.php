@@ -205,7 +205,7 @@ function boot_bootstrap_paginate_links() {
 
 //Sidebar
 
-function themename_widgets_init() {
+function bootheme_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar principale', 'bootheme' ),
 		'id'            => 'sidebar-1',
