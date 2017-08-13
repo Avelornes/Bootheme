@@ -11,13 +11,13 @@ $req_blog = new WP_Query( $args_blog );
 <section class="page_accueil">
     <div class="container">
         <div class="row">
-			<?php
-			if ( $content === $pages ) {
-				get_template_part( 'template-parts/content', 'page' );
-			}
-			?>
+            <div class="section_presentation">
+                <h3 class="titlepres"><?= get_theme_mod( 'section_presentationtitre_pres' ) ?></h3>
+                <img src="<?= wp_get_attachment_image_src( get_theme_mod( 'section_presentationimage' ) )[0] ?>"
+                     class="img-responsive img_pres">
+                <p><?= get_theme_mod( 'section_presentationtexte1' ) ?></p>
+            </div>
         </div>
-    </div>
 </section>
 <hr>
 <?php

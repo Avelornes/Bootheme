@@ -84,7 +84,21 @@ a, a:hover {
     font-size: 1.5em;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     text-shadow: rgba(255, 255, 255, .1) -1px -1px 1px, rgba(0, 0, 0, .5) 1px 1px 1px;
     text-align: center;
+}
+
+img.img-responsive.img_pres {
+    padding-right: 2%;
+    float: left;
+}
+
+h3.titlepres {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.section_presentation {
+    padding: 0 5% 0 5%;
 }
