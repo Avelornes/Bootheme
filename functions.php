@@ -1,5 +1,9 @@
 <?php
 
+require_once 'class/bootheme_customize.class.php';
+
+require_once 'inc/custom-header.php';
+
 function theme_styles() {
 	/*CSS*/
 	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/librairies/bootstrap/css/bootstrap.css' );
@@ -76,6 +80,8 @@ function theme_setup() {
 	//menu
 	register_nav_menus( array( 'primary' => 'Principal' ) );
 
+	/* création section pour les params */
+	add_action( 'customize_register', array( 'bootheme_customize', 'register' ) );
 }
 
 add_action( 'after_setup_theme', 'theme_setup' );

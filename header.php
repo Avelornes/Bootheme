@@ -47,7 +47,13 @@
 			?>
         </div>
     </div>
-    <img class="img-responsive" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>"
-         width="<?php echo get_custom_header()->width; ?>" alt=""/>
+    <div class="site-header">
+        <div class="site-branding">
+            <a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+                <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+            </a>
+        </div><!--.site-branding-->
+    </div>
 </header>
 <div id="content" class="site-content">
