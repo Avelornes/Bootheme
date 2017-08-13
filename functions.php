@@ -1,7 +1,9 @@
 <?php
 
+//add sections in admin customizer
 require_once 'class/bootheme_customize.class.php';
 
+//add custom header for more style & fun
 require_once 'inc/custom-header.php';
 
 function theme_styles() {
