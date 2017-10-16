@@ -7,9 +7,9 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses nisarg_header_style()
- * @uses nisarg_admin_header_style()
- * @uses nisarg_admin_header_image()
+ * @uses bootheme_header_style()
+ * @uses bootheme_admin_header_style()
+ * @uses bootheme_admin_header_image()
  */
 function boot_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'boot_custom_header_args', array(
