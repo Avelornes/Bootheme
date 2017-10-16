@@ -1,7 +1,7 @@
 <?php
 class bootheme_customize
 {
-	private static $panel = 'envolcrea_options';
+	private static $panel = 'bootheme_options';
 	public static function register($wp_customize)
 	{
 		// Nom du panel
